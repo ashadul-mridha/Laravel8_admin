@@ -109,7 +109,9 @@
                     <nav>
                         <ul class="nav nav-left-lines" id="main-nav">
                             <!--HOME-->
+                            @can('show')
                             <li class="{{ request()->is('home') ? 'active-item':'' }}"><a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
+                            @endcan
                             <!--UI ELEMENTENTS-->
                             <li class="has-child-item close-item {{ request()->is('brand/*') ? 'open-item':'' }}">
                                 <a><i class="fa fa-list" aria-hidden="true"></i><span>Brand</span></a>
